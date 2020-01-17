@@ -1,0 +1,25 @@
+Package: marketr
+Title: Tidy Calculation of Marketing Metrics Plus Quick Analysis
+Version: 0.0.1
+Authors@R: 
+    person(given = "Chris",
+           family = "Umphlett",
+           role = c("aut", "cre"),
+           email = "christopher.umphlett@gmail.com")
+Description: Facilitates tidy calculation of popular quantitative marketing 
+    metrics (like Customer Experience Index and Net Promoter Score). It also
+    includes functions for doing analysis that will help marketers and data
+    analysts better understand the drivers and/or trends of these metrics.
+Depends: R (>= 3.5.0)
+License: CC0
+Encoding: UTF-8
+LazyData: true
+Suggests: knitr, rmarkdown, ggplot2
+VignetteBuilder: knitr
+Imports:
+    dplyr (>= 0.8.3),
+    magrittr (>= 1.5),
+    tidyr (>= 1.0.0),
+    tibble (>= 2.1.3),
+    rlang (>= 0.4.2)
+RoxygenNote: 7.0.2

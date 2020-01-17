@@ -1,0 +1,87 @@
+---
+title: "Introduction to marketr"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Put the title of your vignette here}
+  %\VignetteEngine{knitr::rmarkdown}
+  \usepackage[utf8]{inputenc}
+---
+
+## Introduction to marketr
+
+`marketr` facilitates tidy calculation of popular quantitative marketing metrics (like Customer Experience Index and Net Promoter Score). By "tidy", I am referring to the usage of the tidyverse packages and methodology for organizing and analyzing data. The package is designed so that beginning R users can calculate these metrics, along many dimensions, without needing to learn much R syntax. It is also helpful for more experienced programmers to do these calculations quickly.
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, fig.width = 6)
+
+```
+
+## Generate survey response data
+
+To demonstrate the basic usage I will create simulated survey response data. `needs`, `ease` and `emotion` are the columns that make up CXi; `nps_question` is used for NPS; `grps` and `months` will show how these metrics can be calculated along categorical features and/or trended over time.
+
+```{r gen_data}
+library(marketr)
+library(dplyr)
+library(magrittr)
+library(ggplot2)
+
+needs <- sample(2:5, 1000, replace = T)
+ease <- sample(2:5, 1000, replace = T)
+emotion <- sample(2:5, 1000, replace = T)
+nps_question <- sample(3:10, 1000, replace = T)
+grps <- c("a", "b", "c")
+months <- sample(1:12, 1000, replace = T)
+
+survey_data <- tibble::as_tibble(cbind(needs, ease, emotion, nps_question, grps, months)) %>%
+  mutate(month = as.numeric(months))
+
+head(survey_data)
+```
+
+## Calculating CXi
+
+*Customer Experience Index* (CXI) was [developed by Forrester](https://go.forrester.com/analytics/cx-index/). Per Forrester, CXi "measures how successfully a company delivers customer experiences that create and sustain loyalty." 
+
+It involves scoring three questions, each with a likert scale response, and then averaging those scores together. Below, four calculations are done using two different functions.
+
+```{r cxi}
+# Overall CXi
+cxi_calc(survey_data) %>% knitr::kable()
+
+## CXi by group
+cxi_calc(survey_data, grps, cx_high = 4, cx_low = 2) %>% knitr::kable()
+
+# Overall CXi trend
+cxi_trend(survey_data, month) %>% knitr::kable() 
+
+# Overall CXi trend by group - plotted
+cxi_trend(survey_data, month, grps, cx_high = 4, cx_low = 2, min_surveys = 1, avg_surveys = 0) %>% 
+  ggplot(aes(x = month, y = cxi)) +
+  geom_line() +
+  facet_wrap(grps ~ ., nrow = 3)
+```
+
+
+## Calculating NPS
+
+*Net Promoter Score* (NPS) was originally developed by Fred Reichheld and now is owned by [Bain Company and Satmetrix Systems](https://www.netpromoter.com/). The [Wikipedia page](https://en.wikipedia.org/wiki/Net_Promoter) is another good source of information. According to Wikipedia it "is a management tool that can be used to gauge the loyalty of a firm's customer relationships."
+
+The calculation requires a single question with a ten-point scale. Like CXi it is not difficult to do manually; the package enables deeper analysis.Below, four calculations are done using two different functions.
+
+```{r NPS}
+# Overall NPS
+nps_calc(survey_data) %>% knitr::kable()
+
+## NPS by group
+nps_calc(survey_data, grps) %>% knitr::kable()
+
+# Overall NPS trend
+nps_trend(survey_data, month) %>% knitr::kable()
+
+# Overall NPS trend by group - plotted
+nps_trend(survey_data, month, grps, min_surveys = 1, avg_surveys = 0) %>% 
+  ggplot(aes(x = month, y = nps)) +
+  geom_line() +
+  facet_wrap(grps ~ ., nrow = 3)
+```
