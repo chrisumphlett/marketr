@@ -35,3 +35,12 @@ manager may want to calculate CXi across many different dimensions and filtering
 in different ways; the functions in this package utilize the tidy framework to streamline
 calculating CXi along as many dimensions as desired.
 }
+\examples{
+needs <- sample(5, 100, replace = TRUE)
+ease <- sample(5, 100, replace = TRUE)
+emotion <- sample(5, 100, replace = TRUE)
+cx_date <- rep(seq.Date(from = as.Date("2019-01-01"), to = as.Date("2019-01-10"), by = "day"), 10)
+cx_group <- rep(c("a", "b", "c", "d"), 25)
+df <- data.frame(needs, ease, emotion, cx_date, cx_group)
+cxi_calc(df, cx_group)
+}

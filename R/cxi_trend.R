@@ -38,6 +38,15 @@
 #' @importFrom tibble "add_column"
 #'
 #' @export
+#' 
+#' @examples 
+#' needs <- sample(5, 100, replace = TRUE)
+#' ease <- sample(5, 100, replace = TRUE)
+#' emotion <- sample(5, 100, replace = TRUE)
+#' cx_date <- rep(seq.Date(from = as.Date("2019-01-01"), to = as.Date("2019-01-10"), by = "day"), 10)
+#' cx_group <- rep(c("a", "b", "c", "d"), 25)
+#' df <- data.frame(needs, ease, emotion, cx_date, cx_group)
+#' cxi_trend(df, cx_date, cx_group)
 
 cxi_trend <- function(survey_data, trend_var, ..., cx_high = 4, cx_low = 2, min_surveys = 1, avg_surveys = 0) {
   cx_high2 <- cx_high
@@ -81,7 +90,6 @@ cxi_trend <- function(survey_data, trend_var, ..., cx_high = 4, cx_low = 2, min_
 
   # no grouping var
   if(class(test)[1] == "character") {
-    print("No grouping variable selected - calculating CXi across all surveys")
     cxi3 <- cxi2 %>%
       dplyr::summarise(avg_survey_ct = mean(.data$survey_count),
                        min_survey_ct = min(.data$survey_count)) %>%

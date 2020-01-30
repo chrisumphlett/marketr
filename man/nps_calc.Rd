@@ -27,3 +27,10 @@ Net Promoter Score was originally developed by Fred Reichheld and now is owned b
 Bain Company and Satmetrix Systems. According to Wikipedia it "is a management
 tool that can be used to gauge the loyalty of a firm's customer relationships."
 }
+\examples{
+nps_question <- sample(10, 100, replace = TRUE)
+nps_date <- rep(seq.Date(from = as.Date("2019-01-01"), to = as.Date("2019-01-10"), by = "day"), 10)
+nps_group <- rep(c("a", "b", "c", "d"), 25)
+df <- data.frame(nps_question, nps_date, nps_group)
+nps_calc(df, nps_group)
+}

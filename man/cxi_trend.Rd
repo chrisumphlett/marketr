@@ -56,3 +56,12 @@ user-specified thresholds for average or minimum survey counts per time period.
 
 The resulting data set is set up for creating faceted line plots using ggplot2.
 }
+\examples{
+needs <- sample(5, 100, replace = TRUE)
+ease <- sample(5, 100, replace = TRUE)
+emotion <- sample(5, 100, replace = TRUE)
+cx_date <- rep(seq.Date(from = as.Date("2019-01-01"), to = as.Date("2019-01-10"), by = "day"), 10)
+cx_group <- rep(c("a", "b", "c", "d"), 25)
+df <- data.frame(needs, ease, emotion, cx_date, cx_group)
+cxi_trend(df, cx_date, cx_group)
+}

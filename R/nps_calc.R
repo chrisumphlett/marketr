@@ -21,6 +21,13 @@
 #' @import tidyr
 #'
 #' @export
+#' 
+#' @examples 
+#' nps_question <- sample(10, 100, replace = TRUE)
+#' nps_date <- rep(seq.Date(from = as.Date("2019-01-01"), to = as.Date("2019-01-10"), by = "day"), 10)
+#' nps_group <- rep(c("a", "b", "c", "d"), 25)
+#' df <- data.frame(nps_question, nps_date, nps_group)
+#' nps_calc(df, nps_group)
 
 nps_calc <- function(survey_data, ...) {
 

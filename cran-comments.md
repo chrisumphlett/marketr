@@ -1,5 +1,7 @@
-## This is my first submission
-
+## I am resubmitting per CRAN feedback
+* Added standalone @examples for each of the exported functions
+* Removed the `print` statements which were unnecessary
+* Did my best to add attribution in the DESCRIPTION for the creators of the marketing metrics, utilizing the URLs for the web sites for these organizations. I couldn't find other examples of CRAN packages that had this format to utilize as a validation that I was formatting this correctly.
 
 ## Test environments
 

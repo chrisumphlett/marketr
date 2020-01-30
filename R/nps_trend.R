@@ -31,6 +31,14 @@
 #' @import tidyr
 #'
 #' @export
+#' 
+#' @examples 
+#' nps_question <- sample(10, 100, replace = TRUE)
+#' nps_date <- rep(seq.Date(from = as.Date("2019-01-01"), to = as.Date("2019-01-10"), by = "day"), 10)
+#' nps_group <- rep(c("a", "b", "c", "d"), 25)
+#' df <- data.frame(nps_question, nps_date, nps_group)
+#' nps_trend(df, nps_date, nps_group)
+
 
 nps_trend <- function(survey_data, trend_var, ..., min_surveys = 1, avg_surveys = 0) {
 
@@ -70,7 +78,6 @@ nps_trend <- function(survey_data, trend_var, ..., min_surveys = 1, avg_surveys 
 
   # no grouping var
   if(class(test)[1] == "character") {
-    print("No grouping variable selected - calculating NPS across all surveys")
     nps3 <- nps2 %>%
       dplyr::summarise(avg_survey_ct = mean(.data$survey_count),
                        min_survey_ct = min(.data$survey_count)) %>%

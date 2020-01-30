@@ -28,6 +28,16 @@
 #' @importFrom tibble "add_column"
 #'
 #' @export
+#' 
+#' @examples
+#' needs <- sample(5, 100, replace = TRUE)
+#' ease <- sample(5, 100, replace = TRUE)
+#' emotion <- sample(5, 100, replace = TRUE)
+#' cx_date <- rep(seq.Date(from = as.Date("2019-01-01"), to = as.Date("2019-01-10"), by = "day"), 10)
+#' cx_group <- rep(c("a", "b", "c", "d"), 25)
+#' df <- data.frame(needs, ease, emotion, cx_date, cx_group)
+#' cxi_calc(df, cx_group)
+
 
 cxi_calc <- function(survey_data, ..., cx_high = 4, cx_low = 2) {
   cx_high2 <- cx_high
