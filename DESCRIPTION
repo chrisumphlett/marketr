@@ -1,6 +1,6 @@
 Package: marketr
 Title: Tidy Calculation of Marketing Metrics Plus Quick Analysis
-Version: 0.0.1
+Version: 0.0.1.9000
 Authors@R: 
     person(given = "Chris",
            family = "Umphlett",
