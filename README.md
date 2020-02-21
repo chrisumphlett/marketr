@@ -5,6 +5,8 @@ Tidy calculation of popular marketing metrics and quick analysis methods
 `marketr` facilitates tidy calculation of popular quantitative marketing metrics (like Customer Experience Index and Net Promoter Score). It also includes functions for doing analysis that will help marketers and data analysts better understand the drivers and/or trends of these metrics.
 
 ## Installation
+`install.packages("marketr")` provides the current verision from CRAN.
+
 The development version can be installed from GitHub: `devtools::install_github("chrisumphlett/marketr")`.
 
 ## Usage
