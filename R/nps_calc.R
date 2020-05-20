@@ -9,8 +9,7 @@
 #'
 #' @param survey_data Raw survey data. Needs to be one row per survey with the nps question
 #' in a numeric column called nps_question
-#' responses having column names of needs, ease and emotion
-#' @param ... optional columns by which to group the nps calculation. There is no limit to
+#' @param ... Optional columns by which to group the nps calculation. There is no limit to
 #' the number of grouping variables chosen. Too many will likely result in nps calculations
 #' that are too fragmented / based on very small survey counts.
 #'

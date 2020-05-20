@@ -16,7 +16,7 @@
 #' @param survey_data Raw survey data. Needs to be one row per survey with the nps question
 #' in a numeric column called nps_question
 #' @param trend_var Column that represents an element of time, eg week number, date, month & year
-#' @param ... optional columns by which to group the nps calculation. There is no limit to
+#' @param ... Optional columns by which to group the nps calculation. There is no limit to
 #' the number of grouping variables chosen. Too many will likely result in nps calculations
 #' that are too fragmented / based on very small survey counts.
 #' @param min_surveys Minimum surveys found in every period for each group to be included
