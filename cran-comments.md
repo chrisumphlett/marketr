@@ -1,12 +1,9 @@
-## I am resubmitting per CRAN feedback
-* Added standalone @examples for each of the exported functions
-* Removed the `print` statements which were unnecessary
-* Did my best to add attribution in the DESCRIPTION for the creators of the marketing metrics, utilizing the URLs for the web sites for these organizations. I couldn't find other examples of CRAN packages that had this format to utilize as a validation that I was formatting this correctly.
+## Small maintenance version update
+* Only changes were to documentation of how to use functions
 
 ## Test environments
 
-* Developed on and tested with Windows 10, R 3.5 and R 3.6
-* OS X install: I tested the vignette on a Mac with High Sierra OS and the newest versions of RStudio and R installed.
+* Developed on and tested with Windows 10, R 4.0
 * Tested on R-devel with devtools::check_win_devel()
 * Testing against multiple Linux platforms with devtools::check_rhub()
 

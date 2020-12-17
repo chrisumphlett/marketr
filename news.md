@@ -1,6 +1,9 @@
-# marketr 0.0.1.9000
+# marketr 0.0.2.9000
 
-* Package has been published on CRAN and new development version is created.
+* New dev version
+
+# marketr 0.0.2
+
 * Corrections made to roxygen2 documentation on nps_ functions.
 
 # marketr 0.0.1

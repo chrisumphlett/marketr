@@ -12,7 +12,7 @@ in a numeric column called nps_question}
 
 \item{trend_var}{Column that represents an element of time, eg week number, date, month & year}
 
-\item{...}{optional columns by which to group the nps calculation. There is no limit to
+\item{...}{Optional columns by which to group the nps calculation. There is no limit to
 the number of grouping variables chosen. Too many will likely result in nps calculations
 that are too fragmented / based on very small survey counts.}
 

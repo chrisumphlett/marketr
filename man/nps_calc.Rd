@@ -8,10 +8,9 @@ nps_calc(survey_data, ...)
 }
 \arguments{
 \item{survey_data}{Raw survey data. Needs to be one row per survey with the nps question
-in a numeric column called nps_question
-responses having column names of needs, ease and emotion}
+in a numeric column called nps_question}
 
-\item{...}{optional columns by which to group the nps calculation. There is no limit to
+\item{...}{Optional columns by which to group the nps calculation. There is no limit to
 the number of grouping variables chosen. Too many will likely result in nps calculations
 that are too fragmented / based on very small survey counts.}
 }
