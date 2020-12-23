@@ -37,7 +37,7 @@
 #' cx_group <- rep(c("a", "b", "c", "d"), 25)
 #' df <- data.frame(needs, ease, emotion, cx_date, cx_group)
 #' cxi_calc(df, cx_group)
-
+#'
 
 cxi_calc <- function(survey_data, ..., cx_high = 4, cx_low = 2) {
   cx_high2 <- cx_high
