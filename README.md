@@ -4,6 +4,7 @@
 status](https://www.r-pkg.org/badges/version/marketr)](https://cran.r-project.org/package=marketr)
 [![R build
 status](https://github.com/chrisumphlett/marketr/workflows/R-CMD-check/badge.svg)](https://github.com/chrisumphlett/marketr/actions)
+[![CodeFactor](https://www.codefactor.io/repository/github/chrisumphlett/marketr/badge)](https://www.codefactor.io/repository/github/chrisumphlett/marketr)
 <!-- badges: end -->
 
 # marketr
