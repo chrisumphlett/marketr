@@ -1,3 +1,11 @@
+<!-- badges: start -->
+
+[![CRAN
+status](https://www.r-pkg.org/badges/version/marketr)](https://cran.r-project.org/package=marketr)
+[![R build
+status](https://github.com/chrisumphlett/marketr/workflows/R-CMD-check/badge.svg)](https://github.com/chrisumphlett/marketr/actions)
+<!-- badges: end -->
+
 # marketr
 Tidy calculation of popular marketing metrics and quick analysis methods
 
