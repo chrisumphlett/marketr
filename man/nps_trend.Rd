@@ -7,13 +7,13 @@
 nps_trend(survey_data, trend_var, ..., min_surveys = 1, avg_surveys = 0)
 }
 \arguments{
-\item{survey_data}{Raw survey data. Needs to be one row per survey with the nps question
+\item{survey_data}{Raw survey data. Needs to be one row per survey with the NPS question
 in a numeric column called nps_question}
 
 \item{trend_var}{Column that represents an element of time, eg week number, date, month & year}
 
-\item{...}{Optional columns by which to group the nps calculation. There is no limit to
-the number of grouping variables chosen. Too many will likely result in nps calculations
+\item{...}{Optional columns by which to group the NPS calculation. There is no limit to
+the number of grouping variables chosen. Too many will likely result in NPS calculations
 that are too fragmented / based on very small survey counts.}
 
 \item{min_surveys}{Minimum surveys found in every period for each group to be included}
@@ -21,7 +21,7 @@ that are too fragmented / based on very small survey counts.}
 \item{avg_surveys}{Average surveys found in every period for each group to be included}
 }
 \value{
-Data frame with nps and survey count for each combination of the grouping variables over
+Data frame with NPS and survey count for each combination of the grouping variables over
 the time variable.
 }
 \description{

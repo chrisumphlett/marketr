@@ -7,13 +7,13 @@
 #' Bain Company and Satmetrix Systems. According to Wikipedia it "is a management
 #' tool that can be used to gauge the loyalty of a firm's customer relationships."
 #'
-#' @param survey_data Raw survey data. Needs to be one row per survey with the nps question
+#' @param survey_data Raw survey data. Needs to be one row per survey with the NPS question
 #' in a numeric column called nps_question
-#' @param ... Optional columns by which to group the nps calculation. There is no limit to
-#' the number of grouping variables chosen. Too many will likely result in nps calculations
+#' @param ... Optional columns by which to group the NPS calculation. There is no limit to
+#' the number of grouping variables chosen. Too many will likely result in NPS calculations
 #' that are too fragmented / based on very small survey counts.
 #'
-#' @return Data frame with nps and survey count for each combination of the grouping variables
+#' @return Data frame with NPS and survey count for each combination of the grouping variables
 #'
 #' @import dplyr
 #' @importFrom magrittr "%>%"

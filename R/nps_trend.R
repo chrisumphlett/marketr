@@ -13,17 +13,17 @@
 #'
 #' The resulting data set is set up for creating faceted line plots using ggplot2.
 #'
-#' @param survey_data Raw survey data. Needs to be one row per survey with the nps question
+#' @param survey_data Raw survey data. Needs to be one row per survey with the NPS question
 #' in a numeric column called nps_question
 #' @param trend_var Column that represents an element of time, eg week number, date, month & year
-#' @param ... Optional columns by which to group the nps calculation. There is no limit to
-#' the number of grouping variables chosen. Too many will likely result in nps calculations
+#' @param ... Optional columns by which to group the NPS calculation. There is no limit to
+#' the number of grouping variables chosen. Too many will likely result in NPS calculations
 #' that are too fragmented / based on very small survey counts.
 #' @param min_surveys Minimum surveys found in every period for each group to be included
 #' @param avg_surveys Average surveys found in every period for each group to be included
 
 #'
-#' @return Data frame with nps and survey count for each combination of the grouping variables over
+#' @return Data frame with NPS and survey count for each combination of the grouping variables over
 #' the time variable.
 #'
 #' @import dplyr

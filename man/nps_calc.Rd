@@ -7,15 +7,15 @@
 nps_calc(survey_data, ...)
 }
 \arguments{
-\item{survey_data}{Raw survey data. Needs to be one row per survey with the nps question
+\item{survey_data}{Raw survey data. Needs to be one row per survey with the NPS question
 in a numeric column called nps_question}
 
-\item{...}{Optional columns by which to group the nps calculation. There is no limit to
-the number of grouping variables chosen. Too many will likely result in nps calculations
+\item{...}{Optional columns by which to group the NPS calculation. There is no limit to
+the number of grouping variables chosen. Too many will likely result in NPS calculations
 that are too fragmented / based on very small survey counts.}
 }
 \value{
-Data frame with nps and survey count for each combination of the grouping variables
+Data frame with NPS and survey count for each combination of the grouping variables
 }
 \description{
 Simplifies the calculation of Net Promoter Score (NPS) from raw survey data within
