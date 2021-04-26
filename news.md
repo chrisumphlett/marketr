@@ -1,6 +1,6 @@
 # marketr 0.0.2.9000
 
-* New dev version
+* `nps_oppy()` created to allow calculating the hypothethical improvement in NPS if a particular slice of surveys had a perfect score.
 
 # marketr 0.0.2
 
